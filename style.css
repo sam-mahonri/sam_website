@@ -52,7 +52,8 @@ body{
 h1{
   color: var(--fulllight);
   font-size: 42pt;
-  line-height: 1.0em
+  line-height: 1.0em;
+  transition-duration: 0.3s;
 }
 
 .viewport{
@@ -104,6 +105,10 @@ h1{
     display: flex;
     align-items: center;
     padding: 64px;
+  }
+  h1{
+    font-size: 32pt;
+    transition-duration: 0.3s;
   }
   
 }
