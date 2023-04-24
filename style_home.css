@@ -4,12 +4,14 @@
 :root {
   --fulldark: #261647;
   --fulllight: #f5f4fd; 
-  --secdark: #492dee;
-  --enfdark: #6533e8;
+  --secdark: #3230b9;
+  --enfdark: #8032fc;
+  --moredark: #150e2e60;
   --seclight: #c6c0f5;
   --hover_act_a: #60d789;
   --hover_act_b: #df4a61;
   --hover_act_c: #ef9661;
+  --none_light: #ffffff11;
 }
 
 * {
@@ -19,6 +21,14 @@
 body{
   margin: 0;
   background-color: var(--fulldark);
+}
+
+.navbar > .title{
+  margin-top: -40px;
+  margin-bottom: 32px;
+  color: var(--fulllight);
+  font-weight: 800;
+  font-size: 15pt;
 }
 
 .todo{
@@ -34,8 +44,8 @@ body{
   position: fixed;
   height: 100%;
   flex-shrink: 0;
-  width: 300px;
-  background-color: var(--secdark);
+  width: 256px;
+  background-color: var(--moredark);
   transition-duration: 0.3s;
   align-items: center;
 }
@@ -45,14 +55,44 @@ body{
   flex-direction: column;
   position: relative;
   flex-shrink: 0;
-  width: 300px;
-  transition-duration: 0.3s;
+  width: 256px;
   align-items: center;
+  background-image: url(source/back.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .navbar:hover{
   background-color: var(--enfdark);
   transition-duration: 0.3s;
+  width: 266px;
+}
+
+.navbar > button{
+  text-align: right;
+  padding-right: 32px;
+  width: 100%;
+  height: 52px;
+  margin-right: 32px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  background-color: var(--none_light);
+  color: var(--fulllight);
+  font-size: 12pt;
+  transition-duration: 0.3s;
+  border-right: solid 4px var(--hover_act_a);
+}
+
+.navbar > button:hover{
+  width: 350px;
+  background-color: var(--fulllight);
+  color: var(--fulldark);
+  border-radius: 0px 32px 32px 0px;
+  border-right: none;
 }
 
 .logo{
@@ -69,7 +109,6 @@ h1{
 
 .viewport{
   display: flex;
-  align-items: center;
   padding: 64px;
 }
 
@@ -91,14 +130,24 @@ h1{
   border: none;
   transition-duration: 0.3s;
   cursor: pointer;
+  
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 800px) {
   .todo{
     flex-direction: column;
   }
+
+  .navbar > .title{
+    display: none;
+  }
+
+  .navbar > button{
+    display: none;
+  }
+
   .navbar{
-    position: relative;
+    position: fixed;
     flex-shrink: 0;
     width: 100%;
     height: 64px;
@@ -106,6 +155,18 @@ h1{
     align-items: end;
     transition-duration: 0.3s;
   }
+  .navbar:hover{
+    width: 100%;
+    height: 64px;
+  }
+  .space{
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 64px;
+    align-items: end;
+  }
+  
   .logo{
     margin: 8px;
     height: 52px;
