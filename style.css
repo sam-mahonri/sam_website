@@ -20,8 +20,11 @@
 
 body{
   margin: 0;
+  background-color: var(--fulldark);
   background-image: url(source/back.png);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .navbar > .title{
