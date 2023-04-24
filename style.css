@@ -11,7 +11,7 @@
   --hover_act_a: #60d789;
   --hover_act_b: #df4a61;
   --hover_act_c: #ef9661;
-  --none_light: #ffffff05;
+  --none_light: #67b68b18;
 }
 
 * {
@@ -114,13 +114,13 @@ body{
   margin-right: 32px;
   margin-bottom: 8px;
   cursor: pointer;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 6px 6px 0px;
   border: none;
   background-color: var(--none_light);
   color: var(--fulllight);
   font-size: 12pt;
   transition-duration: 0.3s;
-  border-right: solid 4px var(--hover_act_a);
+  border-right: solid 6px var(--hover_act_a);
 }
 
 .navbar > button:hover{
