@@ -64,6 +64,14 @@ body{
 
 }
 
+.navbar .active{
+  width: 330px;
+  background-color: var(--hover_act_a);
+  color: var(--fulldark);
+  border-radius: 0px 32px 32px 0px;
+  border-right: none;
+}
+
 .footer{
   margin-top: auto;
   margin-bottom: 32px;
