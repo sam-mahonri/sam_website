@@ -259,19 +259,22 @@ to{width: 7.2em;}
 }
 
 .loading{
+  
   color: rgba(255, 255, 255, 0.473);
   font-size: 12pt;
-  font-weight: 900;
+  font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: var(--fulldark);
   flex-direction: column;
   animation: sumindo 3000ms;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
+  
 }
 
 .loading img{
@@ -354,6 +357,9 @@ to{width: 7.2em;}
     
   }
 
+  .line-1{
+    font-size: 22pt;
+  }
 
   .navbar > .title{
     display: none;
