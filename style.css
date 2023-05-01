@@ -227,10 +227,11 @@ to{width: 7.2em;}
   url(source/banner.png);
   background-size: cover;
   background-position: center;
-  
+  flex-grow: 1;
   padding: 64px;
   margin-bottom: 32px;
   border-radius: 16px;
+  flex: 1 1 40vw;
 }
 
 .categories{
@@ -354,7 +355,9 @@ to{width: 7.2em;}
   }  
   .todo{
     flex-direction: column;
-    
+    flex-flow: row wrap;
+    flex-shrink: 1;
+    width: 100%;
   }
 
   .line-1{
@@ -400,7 +403,8 @@ to{width: 7.2em;}
   .viewport{
     display: flex;
     align-items: center;
-    padding: 64px;
+    justify-content: center;
+    padding: 32px;
     
     
   }
