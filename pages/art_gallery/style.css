@@ -119,6 +119,7 @@ body {
 .social_bt:hover {
     background-color: var(--fulldark);
     transition-duration: 0.3s;
+    scale: 120%;
 }
 
 .navbar:hover {
@@ -220,7 +221,7 @@ h1 {
 
 .commission{
     color: var(--hover_act_a);
-    background-color: #009d6664;
+    background-color: #009d6630;
     border-radius: 16px;
     padding: 8px;
     margin-left: 20px;
@@ -364,7 +365,7 @@ h1 {
     height: 100%;
     background-color: var(--fulldark);
     flex-direction: column;
-    animation: sumindo 3000ms;
+    animation: sumindo 10000ms;
     animation-fill-mode: forwards;
 
 }
@@ -373,45 +374,33 @@ h1 {
     animation: scaling 1000ms infinite normal;
 }
 
-@keyframes scaling {
-    0% {
-        scale: 100%
-    }
-
-    50% {
-        scale: 120%
-    }
-
-    100% {
-        scale: 100%
-    }
-}
-
-@keyframes sumindo {
-    0% {
-        background-color: var(--fulldark);
-    }
-
-    80% {
-        background-color: var(--fulldark);
+@keyframes scaling{
+    0%{scale: 100%; filter:blur(2px); opacity: 0.5;}
+    50%{scale: 120%; filter: blur(0px); opacity: 1;}
+    100%{scale: 100%; filter:blur(2px); opacity: 0.5;}
+  }
+  
+  @keyframes sumindo{
+    0%{background-color: var(--fulldark);}
+    70%{background-color: var(--fulldark);
         filter: blur(0px);
-
-        opacity: 100;
-    }
-
-    99% {
+        scale: 100%;
+        opacity: 100;}
+        
+    99%{
         background-color: transparent;
         filter: blur(16px);
-
-    }
-
-    100% {
-        filter: blur(16px);
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-}
+        
+        
+        }
+    100%{
+      filter: blur(16px);
+      scale: 220%;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+  }
+  }
 
 .categories div:hover {
     font-weight: 900;
@@ -449,7 +438,46 @@ h1 {
     background-color: var(--hover_act_d);
 }
 
+.mobile{
+    display: none;
+  }
+  
+
 @media only screen and (max-width: 800px) {
+    .mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 12px;
+        top:10px;
+      }
+    
+      .mobile > a > button{
+        padding-top: 4px;
+        cursor: pointer;
+        background-color: #60d78a59;
+        color: var(--hover_act_a);
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 50%;
+        transition-duration: 0.3s;
+        margin-right: 16px;
+      }
+    
+      .mobile > a > button:hover{
+        background-color: var(--hover_act_a);
+        color: var(--fulldark);
+        transition-duration: 0.3s;
+        scale: 110%;
+      }
+      .mobile > a > .active{
+        background-color: var(--hover_act_a);
+        color: var(--fulldark);
+        transition-duration: 0.3s;
+        scale: 122%;
+      }
     .galery{
         flex-direction: column;
     }
@@ -531,9 +559,16 @@ h1 {
     }
 
     h1 {
+        margin-left: 0;
         font-size: 30pt;
         transition-duration: 0.3s;
     }
+
+    .loading img {
+        width: 108px;
+        height: 108px;
+    }
+    
 
 }
 

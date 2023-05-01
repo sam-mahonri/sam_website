@@ -108,6 +108,7 @@ body{
 .social_bt:hover{
   background-color: var(--fulldark);
   transition-duration: 0.3s;
+  scale: 120%;
 }
 
 .navbar:hover{
@@ -295,31 +296,32 @@ to{width: 7.2em;}
 }
 
 @keyframes scaling{
-  0%{scale: 100%}
-  50%{scale: 120%}
-  100%{scale: 100%}
+  0%{scale: 100%; filter:blur(2px); opacity: 0.5;}
+  50%{scale: 120%; filter: blur(0px); opacity: 1;}
+  100%{scale: 100%; filter:blur(2px); opacity: 0.5;}
 }
 
 @keyframes sumindo{
   0%{background-color: var(--fulldark);}
-  80%{background-color: var(--fulldark);
+  70%{background-color: var(--fulldark);
       filter: blur(0px);
-      
+      scale: 100%;
       opacity: 100;}
       
   99%{
       background-color: transparent;
       filter: blur(16px);
       
+      
       }
   100%{
     filter: blur(16px);
+    scale: 220%;
     display: none;
     visibility: hidden;
     opacity: 0;
 }
 }
-
 .categories > a{
   display: flex;
   transition-duration: 0.3s;
@@ -365,7 +367,48 @@ to{width: 7.2em;}
   background-color: var(--hover_act_d);
 }
 
+.mobile{
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
+
+  .mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 12px;
+    top:10px;
+  }
+
+  .mobile > a > button{
+    padding-top: 4px;
+    cursor: pointer;
+    background-color: #60d78a59;
+    color: var(--hover_act_a);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+    margin-right: 16px;
+  }
+
+  .mobile > a > button:hover{
+    background-color: var(--hover_act_a);
+    color: var(--fulldark);
+    transition-duration: 0.3s;
+    scale: 110%;
+  }
+
+  .mobile > a > .active{
+    background-color: var(--hover_act_a);
+    color: var(--fulldark);
+    transition-duration: 0.3s;
+    scale: 122%;
+  }
+
   .categories{
     flex-direction: column;
     height: 512px;
@@ -435,7 +478,10 @@ to{width: 7.2em;}
     font-size: 30pt;
     transition-duration: 0.3s;
   }
-  
+  .loading img {
+    width: 108px;
+    height: 108px;
+  }
 }
 
 p{
