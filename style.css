@@ -11,6 +11,7 @@
   --hover_act_a: #60d789;
   --hover_act_b: #df4a61;
   --hover_act_c: #ef9661;
+  --hover_act_d: #fdfd8a;
   --none_light: #67b68b18;
 }
 
@@ -152,11 +153,14 @@ h1{
 }
 
 .viewport{
+  flex-grow: 1;
+  padding: 32px;
   display: flex;
-  padding: 64px;
+  flex-direction: column;
 }
 
 .ac_button{
+  margin-bottom: 32px;
   padding: 16px 32px 16px 32px;
   font-family: 'Lexend', sans-serif;
   font-size: 12pt;
@@ -177,9 +181,177 @@ h1{
   
 }
 
+.line-1{
+  font-family: 'Lexend', monospace;
+  font-weight: 900;
+  position: relative;
+  width: 24em;
+  font-size: 280%;
+  margin: 0 auto;
+  
+  color: white;
+  border-right: 4px solid rgba(255,255,255,.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 32px;
+  margin-bottom: 32px;   
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 2s 2s 1 normal both,
+           blinkTextCursor 400ms infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 7.2em;}
+}
+
+@keyframes blinkTextCursor{
+0%{border-right-color: var(--background_color_light_theme)}
+50%{border-right-color: transparent;}
+100%{border-right-color: var(--background_color_light_theme)}
+}
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0), 
+    rgba(101, 23, 173, 0.616)
+  ),
+  /* bottom, image */
+  url(source/banner.png);
+  background-size: cover;
+  background-position: center;
+  
+  padding: 64px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+}
+
+.categories{
+  display: flex;
+  flex-direction: row;
+  height: 206px;
+  padding-bottom: 32px;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.categories div{
+  font-size: 16pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  border-radius: 16px;
+  flex-grow: 1;
+  background-color: #ffffff46;
+  margin-left: 16px;
+  margin-right: 16px;
+  
+}
+
+.loading{
+  color: rgba(255, 255, 255, 0.473);
+  font-size: 12pt;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--fulldark);
+  flex-direction: column;
+  animation: sumindo 3000ms;
+  animation-fill-mode: forwards; 
+}
+
+.loading img{
+  animation: scaling 1000ms infinite normal;
+}
+
+@keyframes scaling{
+  0%{scale: 100%}
+  50%{scale: 120%}
+  100%{scale: 100%}
+}
+
+@keyframes sumindo{
+  0%{background-color: var(--fulldark);}
+  80%{background-color: var(--fulldark);
+      filter: blur(0px);
+      
+      opacity: 100;}
+      
+  99%{
+      background-color: transparent;
+      filter: blur(16px);
+      
+      }
+  100%{
+    filter: blur(16px);
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+}
+.categories div:hover{
+  font-weight: 900;
+  letter-spacing: 8px;
+  transition-duration: 0.3s;
+  scale: 100%;
+  color: var(--fulldark)
+}
+
+.categories .design{
+  color: var(--hover_act_a);
+  background-color: #0ec97159;
+}
+
+.categories .design:hover{
+  background-color: var(--hover_act_a);
+}
+
+.categories .gamedev{
+  color: var(--hover_act_b);
+  background-color: #f87d7d34
+}
+
+.categories .gamedev:hover{
+  background-color: var(--hover_act_b);
+  color:white;
+}
+
+.categories .music{
+  color: var(--hover_act_d);
+  background-color: #fcfc7344
+}
+
+.categories .music:hover{
+  background-color: var(--hover_act_d);
+}
+
 @media only screen and (max-width: 800px) {
+  .categories{
+    flex-direction: column;
+    height: 512px;
+  }
+
+  .categories div{
+    
+    margin-top: 16px;
+  }  
   .todo{
     flex-direction: column;
+    
   }
 
 
@@ -223,6 +395,8 @@ h1{
     display: flex;
     align-items: center;
     padding: 64px;
+    
+    
   }
   h1{
     font-size: 30pt;
