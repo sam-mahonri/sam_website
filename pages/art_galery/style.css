@@ -137,6 +137,8 @@ body {
     border-right: solid 6px var(--hover_act_a);
 }
 
+
+  
 .navbar >.navbt > button:hover {
     width: 310px;
     background-color: var(--fulllight);
@@ -150,11 +152,14 @@ body {
     cursor: pointer;
 }
 
+
+
 h1 {
     color: var(--fulllight);
     font-size: 42pt;
     line-height: 1.0em;
     transition-duration: 0.3s;
+    margin-left: 16px;
 }
 
 .viewport {
@@ -162,7 +167,41 @@ h1 {
     padding: 32px;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
+
+.galery{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.column{
+    width: 49.8%;
+    overflow: hidden;
+}
+
+.column > a > img{
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+    border-radius: 2px;
+    transition-duration: 0.3s;
+}
+
+.column > a > img:hover{
+    transition-duration: 0.3s;
+    opacity: 1;
+    scale: 105%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
 
 .ac_button {
     margin-bottom: 32px;
@@ -376,6 +415,14 @@ h1 {
 }
 
 @media only screen and (max-width: 800px) {
+    .galery{
+        flex-direction: column;
+    }
+
+    .column{
+        width: 100%;
+    }
+
     .categories {
         flex-direction: column;
         height: 512px;
@@ -401,7 +448,7 @@ h1 {
         display: none;
     }
 
-    .navbar>button {
+    .navbar>.navbt {
         display: none;
     }
 

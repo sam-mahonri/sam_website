@@ -248,7 +248,7 @@ to{width: 7.2em;}
   margin-right: -16px;
 }
 
-.categories div{
+.categories > a > div{
   font-size: 16pt;
   display: flex;
   flex-direction: column;
@@ -259,8 +259,7 @@ to{width: 7.2em;}
   border-radius: 16px;
   flex-grow: 1;
   background-color: #ffffff46;
-  margin-left: 16px;
-  margin-right: 16px;
+  
   
 }
 
@@ -312,7 +311,17 @@ to{width: 7.2em;}
     opacity: 0;
 }
 }
-.categories div:hover{
+
+.categories > a{
+  display: flex;
+  transition-duration: 0.3s;
+  flex-grow: 1;
+  margin-left: 16px;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.categories > a > div:hover{
   font-weight: 900;
   letter-spacing: 8px;
   transition-duration: 0.3s;
@@ -373,7 +382,7 @@ to{width: 7.2em;}
     display: none;
   }
 
-  .navbar > button{
+  .navbar > .navbt{
     display: none;
   }
   .footer{
