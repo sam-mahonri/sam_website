@@ -43,6 +43,17 @@ body {
     display: flex;
 }
 
+.commission > p > b > a{
+    text-decoration: none;
+    color: var(--hover_act_c);
+    transition-duration: 0.3s;
+}
+
+.commission > p > b > a:hover{
+    color: var(--hover_act_d);
+    transition-duration: 0.3s;
+}
+
 .navbar {
     display: flex;
     flex-direction: column;
@@ -53,6 +64,7 @@ body {
     background-color: var(--moredark);
     transition-duration: 0.3s;
     align-items: center;
+    z-index: 10;
 }
 
 .space {
@@ -147,12 +159,16 @@ body {
     border-right: none;
 }
 
-.logo {
+.logo{
     margin: 32px;
     cursor: pointer;
-}
-
-
+    transition-duration: 0.3s;
+  }
+  
+  .logo:hover{
+    scale: 125%;
+    transition-duration: 0.3s;
+  }
 
 h1 {
     color: var(--fulllight);
@@ -335,7 +351,7 @@ h1 {
 }
 
 .loading {
-
+    z-index: 999;
     color: rgba(255, 255, 255, 0.473);
     font-size: 12pt;
     font-weight: 300;
@@ -476,6 +492,7 @@ h1 {
     }
 
     .navbar {
+        backdrop-filter: blur(32px);
         position: fixed;
         flex-shrink: 0;
         width: 100%;

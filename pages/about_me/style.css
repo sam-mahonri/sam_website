@@ -22,7 +22,7 @@
 body{
   margin: 0;
   background-color: var(--fulldark);
-  background-image: url(source/back.png);
+  background-image: url(../../source/back.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -44,7 +44,6 @@ body{
 }
 
 .navbar{
-  z-index: 10;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -66,12 +65,12 @@ body{
 
 }
 
-.navbar .active{
-  width: 330px;
-  background-color: var(--hover_act_a);
-  color: var(--fulldark);
-  border-radius: 0px 32px 32px 0px;
-  border-right: none;
+.navbar > .navbt > .active {
+    width: 300px !important;
+    background-color: var(--hover_act_a) !important;
+    color: var(--fulldark) !important;
+    border-radius: 0px 32px 32px 0px !important;
+    border-right: none !important;
 }
 
 .footer{
@@ -147,21 +146,22 @@ body{
 }
 
 .logo{
-  margin: 32px;
-  cursor: pointer;
-  transition-duration: 0.3s;
-}
-
-.logo:hover{
-  scale: 125%;
-  transition-duration: 0.3s;
-}
+    margin: 32px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  
+  .logo:hover{
+    scale: 125%;
+    transition-duration: 0.3s;
+  }
 
 h1{
   color: var(--fulllight);
   font-size: 42pt;
   line-height: 1.0em;
   transition-duration: 0.3s;
+  margin-left: 16px;
 }
 
 .viewport{
@@ -236,7 +236,7 @@ to{width: 7.2em;}
     rgba(101, 23, 173, 0.616)
   ),
   /* bottom, image */
-  url(source/banner.png);
+  url(../../source/banner.png);
   background-size: cover;
   background-position: center;
   flex-grow: 1;
@@ -396,6 +396,7 @@ to{width: 7.2em;}
     display: none;
   }
   .navbar{
+    z-index: 10;
     backdrop-filter: blur(32px);
     position: fixed;
     flex-shrink: 0;
