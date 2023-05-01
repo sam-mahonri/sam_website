@@ -190,7 +190,7 @@ h1 {
     width: 100%;
     object-fit: contain;
     opacity: 0.9;
-    border-radius: 2px;
+    border-radius: 8px;
     transition-duration: 0.3s;
 }
 
@@ -202,9 +202,28 @@ h1 {
     margin-top: 8px;
 }
 
+.commission{
+    color: var(--hover_act_a);
+    background-color: #009d6664;
+    border-radius: 16px;
+    padding: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.commission > p{
+    margin-top: -2px;
+    margin-bottom: 16px;
+    color: var(--hover_act_a);
+}
 
 .ac_button {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     padding: 16px 32px 16px 32px;
     font-family: 'Lexend', sans-serif;
     font-size: 12pt;
