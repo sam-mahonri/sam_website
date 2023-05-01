@@ -115,7 +115,12 @@ body{
   width: 266px;
 }
 
-.navbar > button{
+.navbar > .navbt{
+  width: 100%;
+  margin-right: 32px;
+}
+
+.navbar > .navbt > button{
   text-align: right;
   padding-right: 32px;
   width: 100%;
@@ -132,8 +137,8 @@ body{
   border-right: solid 6px var(--hover_act_a);
 }
 
-.navbar > button:hover{
-  width: 350px;
+.navbar > .navbt > button:hover{
+  width: 310px;
   background-color: var(--fulllight);
   color: var(--fulldark);
   border-radius: 0px 32px 32px 0px;
