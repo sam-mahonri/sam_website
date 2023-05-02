@@ -110,6 +110,10 @@ body{
   scale: 120%;
 }
 
+p{
+  margin: 16px;
+}
+
 .navbar:hover{
   background-color: var(--enfdark);
   transition-duration: 0.3s;
