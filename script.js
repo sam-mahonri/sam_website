@@ -6,7 +6,7 @@ if (lang == null){
 } else{
     switch(lang){
         case 'pt': window.location.replace("index_ptbr.html"); break;
-        case 'en': window.location.replace("index.html"); break;
+        case 'en': window.location.replace("index_en.html"); break;
         case 'set': break;
     }
     

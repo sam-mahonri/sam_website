@@ -423,6 +423,7 @@ to{width: 7.2em;}
     margin-top: 16px;
   }  
   .todo{
+    text-align: center;
     flex-direction: column;
     flex-flow: row wrap;
     flex-shrink: 1;
