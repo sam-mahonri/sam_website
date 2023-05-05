@@ -172,8 +172,9 @@ h1{
   border-radius: 16px;
   padding: 16px;
   display: flex;
-  padding-top: 32px;
+  
   align-items: center;
+  color: white;
 }
 
 .viewport{
