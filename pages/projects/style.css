@@ -169,12 +169,47 @@ h1{
 .div_pro{
   margin-left: 16px;
   background-color: rgba(255, 255, 255, 0.111);
-  border-radius: 16px;
+  border-radius: 32px;
   padding: 16px;
   display: flex;
+  justify-content: stretch;
+  align-items: stretch;
   
-  align-items: center;
   color: white;
+}
+
+.div_pro > .item{
+  padding: 22px;
+  width: 100%;
+  
+  background-color: var(--fulldark);
+  border-radius: 16px;
+}
+
+.div_pro .spoiler{
+  filter:blur(5px);
+  transition-duration: 2s;
+}
+
+.div_pro .spoiler:hover{
+  filter:blur(0px);
+  transition-duration: 2s;
+}
+
+.div_pro > .item > .info > h2{
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+.div_pro > .item > .info > .timestamp{
+  background-color: #60d78a37;
+  color: var(--hover_act_a);
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
+  border-radius: 4em;
+  margin-top: 16px;
 }
 
 .viewport{
