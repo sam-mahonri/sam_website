@@ -181,10 +181,19 @@ h1{
 .div_pro > .item{
   padding: 22px;
   width: 100%;
-  
-  background-color: var(--fulldark);
+  display: flex;
+  flex-direction: row;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.671), 
+    rgba(64, 17, 108, 0.616)
+  ),
+  /* bottom, image */
+  url(../../source/logowip2.png);
+  background-position: center;
+  background-size: cover;
   border-radius: 16px;
 }
+
 
 .div_pro .spoiler{
   filter:blur(5px);
