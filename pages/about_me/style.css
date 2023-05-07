@@ -161,6 +161,15 @@ p{
     transition-duration: 0.3s;
   }
 
+.info{
+  margin-top: -16px;
+  
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1{
   color: var(--fulllight);
   font-size: 42pt;
