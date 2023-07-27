@@ -14,6 +14,15 @@ async function carregarTodosOsElementos() {
             carregarConteudo("nav_area", "./source/modules/navbar.html")
         ]);
         console.log("[ OwO ] Página completamente carregada com êxito!");
+        if (currentPage == "arts"){
+            document.getElementById('arts').classList.add("active_nav_bt");
+        }else if (currentPage == "projects"){
+            document.getElementById('projects').classList.add("active_nav_bt");
+        }else if (currentPage == "about"){
+            document.getElementById('about').classList.add("active_nav_bt");
+        }else if (currentPage == "tos"){
+            document.getElementById('tos').classList.add("active_nav_bt");
+        }
     } catch (error) {
         console.error("[ ERR ] Falha ao carregar conteúdo da página! - " + error);
     }
