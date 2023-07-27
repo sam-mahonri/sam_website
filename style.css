@@ -90,8 +90,11 @@ body {
 }
 
 .navbar_area{
-    
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
     top: 0;
     left: 0;
     width: 240px;
@@ -101,8 +104,10 @@ body {
 }
 
 .scr_nav{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    flex-grow: 1;
     padding: 8px;
     box-sizing: border-box;
 }
@@ -125,6 +130,7 @@ body {
     border-radius: 32px;
     margin-top: 0px;
     margin-bottom: 8px;
+    align-self: stretch;
 }
 
 .nav_buttons:hover{
@@ -167,6 +173,8 @@ a{
 
 .desktop{
     display: contents;
+    position: relative;
+    overflow-y: scroll;
 }
 .mobile{
     display: none;
@@ -177,7 +185,7 @@ a{
     background-color: transparent;
     border: none;
     font-size: 14pt;
-    position: fixed;
+    position: absolute;
     left: 16px;
     top: 19px;
 }
@@ -268,14 +276,13 @@ a{
 .footer_nav{
     opacity: 0.5;
     font-size: 10pt;
-    position: absolute;
-    bottom: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 22px;
     box-sizing: border-box;
-    width: 240px;
+    width: 100%;
+    bottom: 16px;
 }
 
 
