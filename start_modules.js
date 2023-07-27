@@ -53,3 +53,42 @@ function toggleMenu(){
 
     
 }
+
+var loaded_images = 0;
+var buf_size = 0;
+var max_img = 0;
+
+function loadArts() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const gallery = document.querySelector('.gallery');
+            buf_size = Object.keys(data).length;
+            while(max_img < 5 && loaded_images < buf_size){
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+
+                const image = document.createElement('img');
+                image.src = data[loaded_images].foto;
+                image.alt = 'Imagem';
+                image.loading = 'lazy';
+                
+                const link = document.createElement('a');
+                link.href = data[loaded_images].post;
+                link.innerHTML = '<i class="fas fa-heart"></i>';
+                link.target = "_blank";
+                
+                galleryItem.appendChild(image);
+                galleryItem.appendChild(link);
+                gallery.appendChild(galleryItem);
+                max_img++;
+                loaded_images++;
+            }
+        })
+        .catch(error => console.error('Erro ao carregar o JSON:', error));
+}
+
+function continueLoadingImages(){
+    max_img = 0;
+    loadArts();
+}
