@@ -14,6 +14,7 @@
     --hover_act_b: #df4a61;
     --hover_act_c: #ef9661;
     --hover_act_d: #fdfd8a;
+    --hover_act_e: #5154e2;
     --none_light: #67b68b18;
     --current_text_color: var(--fulllight);
     --current_background_color: var(--fulldark);
@@ -87,16 +88,32 @@ body {
 }
 
 .title{
+    display: flex;
     font-family: 'Lexend', sans-serif;
     font-weight: 900;
     font-size: 22pt;
+    flex-direction: row;
+    align-items: center;
 }
-
+.title > img {
+    height: 48px;
+    width: 48px;
+    margin-right: 8px;
+}
 .subtitle{
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 200;
     font-size: 16pt;
 
+}
+
+.tags_info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+    align-items: center;
 }
 
 .navbar_area{
@@ -278,6 +295,9 @@ a{
     .gallery-item img{
         opacity: 1 !important;
     }
+    .tags_info{
+        justify-content: center;
+    }
 }
 
 .normal_bt{
@@ -386,4 +406,66 @@ a{
     margin-top: 18px;
     margin-bottom: 18px;
     border-radius: 2px;
+}
+
+.info_alert{
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--fulldark);
+    padding: 4px 8px 4px 8px;
+    border-radius: 32px;
+}
+.info_alert > i{
+    margin-right: 8px;
+}
+
+.red{
+    background-color: var(--hover_act_b);
+}
+
+.yellow{
+    background-color: var(--hover_act_d);
+    color: var(--fulldark);
+}
+
+.orange{
+    background-color: var(--hover_act_c);
+}
+
+.blue{
+    background-color: var(--hover_act_e);
+}
+
+.descr_info{
+    text-align: justify;
+}
+
+.vh_mid_banner{
+    display: flex;
+    height: 128px;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.down_anim{
+    position: relative;
+    font-size: 12pt;
+    animation: pulse 2s infinite;
+    bottom: -8px;
+}
+
+@keyframes pulse {
+    0%{
+        translate: 0px 0px;
+    }
+    50%{
+        translate: 0px 6px;
+    }
+    100%{
+        translate: 0px 0px;
+    }
 }
