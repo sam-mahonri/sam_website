@@ -183,8 +183,8 @@ a{
 }
 .span_menu{
     position: fixed;
-    right: 16px;
-    font-size: 10pt;
+    right: 18px;
+    font-size: 12pt;
     font-weight: 800;
 }
 .span_menu > i{

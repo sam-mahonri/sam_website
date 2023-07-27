@@ -16,16 +16,16 @@ async function carregarTodosOsElementos() {
         console.log("[ OwO ] Página completamente carregada com êxito!");
         if (currentPage == "arts"){
             document.getElementById('arts').classList.add("active_nav_bt");
-            document.getElementById('page_name').innerHTML = 'Galeria de artes <i class="fas fa-palette"></i>';
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-palette"></i>';
         }else if (currentPage == "projects"){
             document.getElementById('projects').classList.add("active_nav_bt");
-            document.getElementById('page_name').innerHTML = 'Meus Projetos <i class="fas fa-gamepad"></i>';
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-gamepad"></i>';
         }else if (currentPage == "about"){
             document.getElementById('about').classList.add("active_nav_bt");
-            document.getElementById('page_name').innerHTML = 'Sobre mim <i class="fas fa-user"></i>';
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-user"></i>';
         }else if (currentPage == "tos"){
             document.getElementById('tos').classList.add("active_nav_bt");
-            document.getElementById('page_name').innerHTML = 'Termos de serviço <i class="fas fa-scroll"></i>';
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-scroll"></i>';
         }else{
             document.getElementById('page_name').innerHTML = '';
         }
