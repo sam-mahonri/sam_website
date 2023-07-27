@@ -43,10 +43,12 @@ function toggleMenu(){
         nav_open = false
         document.getElementById('navbt_open').innerHTML = '<i class="fas fa-bars"></i>'
         document.getElementById('navbar').classList.remove('showing_all');
+        document.getElementById('page_name').classList.remove('hide_element');
     }else{
         nav_open = true
         document.getElementById('navbt_open').innerHTML = '<i class="fas fa-times-circle"></i>'
         document.getElementById('navbar').classList.add('showing_all');
+        document.getElementById('page_name').classList.add('hide_element');
     }
 
     

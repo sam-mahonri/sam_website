@@ -180,6 +180,10 @@ a{
     display: none;
 }
 
+.hide_element{
+    display: none;
+}
+
 .menu_bt{
     cursor: pointer;
     background-color: transparent;
