@@ -84,6 +84,9 @@ function loadArts() {
                 max_img++;
                 loaded_images++;
             }
+            if (loaded_images >= buf_size - 1){
+                document.getElementById('load_more_img').classList.add('hide_element');
+            }
         })
         .catch(error => console.error('Erro ao carregar o JSON:', error));
 }
