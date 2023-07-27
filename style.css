@@ -7,7 +7,7 @@
     --fulllight: #f5f4fd;
     --secdark: #16131dbe;
     --enfdark: #8858ffff;
-    --enfdarkbt: #5b4c7444;
+    --enfdarkbt: #5b4c7470;
     --moredark: #08031d63;
     --seclight: #c6c0f5;
     --hover_act_a: #60d789;
@@ -149,7 +149,7 @@ a{
     align-items: center;
     background-color: var(--enfdark);
     padding: 32px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .title_navbar > a > img{
@@ -176,10 +176,19 @@ a{
     cursor: pointer;
     background-color: transparent;
     border: none;
-    font-size: 16pt;
+    font-size: 14pt;
     position: fixed;
     left: 16px;
-    top: 16px;
+    top: 19px;
+}
+.span_menu{
+    position: fixed;
+    right: 16px;
+    font-size: 10pt;
+    font-weight: 800;
+}
+.span_menu > i{
+    margin-left: 8px;
 }
 
 @media only screen and (max-width: 600px) {
