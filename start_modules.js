@@ -26,6 +26,9 @@ async function carregarTodosOsElementos() {
         }else if (currentPage == "tos"){
             document.getElementById('tos').classList.add("active_nav_bt");
             document.getElementById('page_name').innerHTML = '<i class="fas fa-scroll"></i>';
+        }else if (currentPage == "music"){
+            document.getElementById('music').classList.add("active_nav_bt");
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-music"></i>';
         }else{
             document.getElementById('page_name').innerHTML = '';
         }
