@@ -3,7 +3,7 @@
 @import url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
 
 :root {
-    --fulldark: rgb(41, 38, 54);
+    --fulldark: #1e1b25;
     --fulllight: #f5f4fd;
     --secdark: #16131dbe;
     --enfdark: #8858ffff;
@@ -643,7 +643,7 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--enfdark);
+    background-color: var(--fulldark);
     box-sizing: border-box;
     padding: 32px;
     height: auto;
