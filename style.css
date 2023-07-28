@@ -532,3 +532,39 @@ a{
 .blue_light{
     background-color: var(--hover_act_f);
 }
+
+.global_sec{
+    padding: 22px;
+    background-color: #211d2733;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+li, ol{
+    text-align: justify;
+    padding-left: 16px ;
+}
+
+.title_2{
+    font-family: 'Lexend', sans-serif;
+    font-size: 14pt;
+    font-weight: 800;
+}
+
+p{
+    text-align: justify;
+}
+
+.sec_1 > li{
+    font-weight: 800;
+    font-size: 14pt;
+    color: var(--hover_act_d)
+}
+
+.sec_2 > li{
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--hover_act_a)
+}
