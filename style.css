@@ -212,7 +212,7 @@ a{
 }
 
 .hide_element{
-    display: none;
+    display: none !important;
 }
 
 .menu_bt{
@@ -609,4 +609,30 @@ p{
     display: flex;
     flex-direction: row;
     gap: 16px;
+}
+
+.splash_all{
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--fulldark);
+    animation: splash 2s forwards;
+}
+
+@keyframes splash{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }

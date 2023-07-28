@@ -98,3 +98,9 @@ function continueLoadingImages(){
     max_img = 0;
     loadArts();
 }
+
+function hide_splash(){
+    document.getElementById('splash_all').classList.add('hide_element');
+}
+
+setTimeout(hide_splash, 2500);
