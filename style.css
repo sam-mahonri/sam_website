@@ -625,6 +625,10 @@ p{
     animation: splash 2s forwards;
 }
 
+.splash_all > .big_logo{
+    animation: bounce_logo 2s forwards;
+}
+
 @keyframes splash{
     0%{
         opacity: 1;
@@ -634,6 +638,24 @@ p{
     }
     100%{
         opacity: 0;
+    }
+}
+
+@keyframes bounce_logo{
+    0%{
+        scale: 80%;
+        opacity: 0.7;
+        filter: blur(4px);
+    }
+    80%{
+        scale: 100%;
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100%{
+        scale: 70%;
+        opacity: 0.7;
+        filter: blur(8px);
     }
 }
 
