@@ -11,7 +11,8 @@ async function carregarConteudo(elementoId, url) {
 async function carregarTodosOsElementos() {
     try {
         await Promise.all([
-            carregarConteudo("nav_area", "./source/modules/navbar.html")
+            carregarConteudo("nav_area", "./source/modules/navbar.html"),
+            carregarConteudo("footer", "./source/modules/footer.html")
         ]);
         console.log("[ OwO ] Página completamente carregada com êxito!");
         if (currentPage == "arts"){

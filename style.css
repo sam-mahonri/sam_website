@@ -636,3 +636,32 @@ p{
         opacity: 0;
     }
 }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--enfdark);
+    box-sizing: border-box;
+    padding: 32px;
+    height: auto;
+}
+
+footer > img{
+    height: 64px;
+}
+
+.mini_socials{
+    margin: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.mini_socials > i{
+    font-size: 12pt;
+}
+.mini_socials > a:hover > i{
+    translate: 0px -4px;
+}
