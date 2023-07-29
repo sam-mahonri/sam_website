@@ -738,7 +738,7 @@ footer > a > img:hover{
     translate: 0px -4px;
 }
 
-.menu_bt:active, .normal_bt:active, .social_bt:active, .card_button:active, .nav_buttons:active{
+.menu_bt:active, .normal_bt:active, .social_bt:active, .card_button:active, .nav_buttons:active, .goup:active{
     transform: scale(0.8);
     transition: transform 0.2s ease-in-out;
 }
@@ -764,7 +764,7 @@ footer > a > img:hover{
     font-family: 'Lexend', sans-serif !important;
     flex-direction: column-reverse;
     gap: 8px;
-    padding: 32px;
+    padding: 18px;
     box-sizing: border-box;
 }
 
@@ -820,4 +820,24 @@ noscript{
 
 #warn_area{
     width: 100%;
+}
+
+.goup{
+    cursor: pointer;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--enfdark);
+    border: none;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.193);
+}
+
+.goup:hover{
+    scale: 110%;
 }
