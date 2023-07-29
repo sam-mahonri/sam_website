@@ -20,6 +20,10 @@
     --current_background_color: var(--fulldark);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: var(--current_background_color);
