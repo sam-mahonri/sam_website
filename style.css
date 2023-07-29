@@ -422,7 +422,7 @@ a{
 
 .divisor{
     width: 100%;
-    min-height: 2px;
+    min-height: 4px;
     background-color: rgba(255, 255, 255, 0.179);
     margin-top: 18px;
     margin-bottom: 18px;
@@ -564,6 +564,10 @@ a{
 
 .bluesky{
     background-image: linear-gradient(to bottom, #0077ff, rgb(0, 195, 255));
+}
+
+.insta{
+    background-color: #dd31a9;
 }
 
 @keyframes gradient_scr {
@@ -791,4 +795,20 @@ footer > a > img:hover{
     gap: 8px;
     margin-bottom: 16px;
     border-radius: 10px;
+}
+
+noscript{
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: var(--fulldark);
+    flex-direction: column;
+    gap: 16;
 }
