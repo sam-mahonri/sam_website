@@ -109,3 +109,24 @@ function hide_splash(){
 }
 
 setTimeout(hide_splash, 2500);
+
+
+var prices_show = false;
+
+function seePrices(este){
+    if(!prices_show){
+        este.innerHTML = 'Ocultar preços<i class="fas fa-money-bill-wave"></i><i class="fas fa-chevron-circle-up"></i>';
+        prices_show = true
+        document.getElementById('prices').classList.remove('hide_element');
+    }else{
+        este.innerHTML = 'Ver preços<i class="fas fa-money-bill-wave"></i><i class="fas fa-chevron-circle-down"></i>';
+        prices_show = false
+        document.getElementById('prices').classList.add('hide_element');
+    }
+}
+
+function onlyShowPrices(){
+    document.getElementById('prices').classList.remove('hide_element');
+    document.getElementById('show_prices').innerHTML = 'Ocultar preços<i class="fas fa-money-bill-wave"></i><i class="fas fa-chevron-circle-up"></i>';
+    prices_show = true
+}
