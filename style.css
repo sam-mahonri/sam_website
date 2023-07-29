@@ -322,6 +322,10 @@ a{
     .cards_area{
         flex-direction: column !important;
     }
+    .tags_info > .descr_info{
+        width: 100vh;
+        text-align: center !important;
+    }
 }
 
 .normal_bt{
