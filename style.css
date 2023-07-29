@@ -695,8 +695,12 @@ footer{
     height: auto;
 }
 
-footer > img{
+footer > a > img{
     height: 64px;
+}
+
+footer > a > img:hover{
+    scale: 120%;
 }
 
 .mini_socials{
