@@ -12,7 +12,8 @@ async function carregarTodosOsElementos() {
     try {
         await Promise.all([
             carregarConteudo("nav_area", "./source/modules/navbar.html"),
-            carregarConteudo("footer", "./source/modules/footer.html")
+            carregarConteudo("footer", "./source/modules/footer.html"),
+            carregarConteudo("warn_area", "./source/modules/warning.html")
         ]);
         console.log("[ OwO ] Página completamente carregada com êxito!");
         if (currentPage == "arts"){

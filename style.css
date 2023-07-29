@@ -812,3 +812,7 @@ noscript{
     flex-direction: column;
     gap: 16;
 }
+
+#warn_area{
+    width: 100%;
+}
