@@ -30,6 +30,9 @@ async function carregarTodosOsElementos() {
         }else if (currentPage == "music"){
             document.getElementById('music').classList.add("active_nav_bt");
             document.getElementById('page_name').innerHTML = '<i class="fas fa-music"></i>';
+        }else if (currentPage == "comms"){
+            document.getElementById('comms').classList.add("active_nav_bt");
+            document.getElementById('page_name').innerHTML = '<i class="fas fa-heart"></i>';
         }else{
             document.getElementById('page_name').innerHTML = '';
         }

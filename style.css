@@ -66,7 +66,7 @@ body {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    min-height: 90vh;
+    min-height: 55vh;
     margin-top: -32px;
     justify-content: center;
     align-items: center;
@@ -102,11 +102,15 @@ body {
     width: 48px;
     margin-right: 8px;
 }
+
 .subtitle{
+    display: flex;
+    flex-direction: row;
     font-family: 'Lexend', sans-serif;
     font-weight: 500;
     font-size: 16pt;
     margin-bottom: 4px;
+    gap: 8px;
 }
 
 .tags_info{
@@ -193,6 +197,10 @@ a{
     width: 92px;
     height: 92px;
     margin-top: -12px;
+}
+
+.title_navbar > a > img:hover{
+    scale: 110%;
 }
 
 .title_navbar > span{
@@ -305,7 +313,7 @@ a{
         padding: 0px !important;
     }
     .vh_allheight_center{
-        min-height: 80vh;
+        min-height: 50vh;
     }
     .cards_area{
         flex-direction: column !important;
@@ -319,6 +327,7 @@ a{
     border-radius: 32px;
     padding: 8px 16px 8px 16px;
     font-weight: 800;
+    font-size: 10pt;
 }
 .normal_bt > i{
     margin-left: 8px;
@@ -413,11 +422,11 @@ a{
 
 .divisor{
     width: 100%;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.24);
+    min-height: 2px;
+    background-color: rgba(255, 255, 255, 0.179);
     margin-top: 18px;
     margin-bottom: 18px;
-    border-radius: 2px;
+    border-radius: 8px;
 }
 
 .info_alert{
@@ -536,6 +545,11 @@ a{
 
 .purple{
     background-color: var(--enfdark);
+}
+
+.green{
+    background-color: var(--hover_act_a);
+    color: var(--fulldark);
 }
 
 .blue_light{
@@ -727,3 +741,54 @@ footer > a > img:hover{
     padding-right: 20px;
 }
 
+.post_card{
+    cursor: pointer;
+    display: flex;
+    height: 40vh;
+    justify-content: end;
+    align-items: start;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secdark);
+    background-blend-mode: darken;
+    font-size: 15pt;
+    font-family: 'Lexend', sans-serif !important;
+    flex-direction: column-reverse;
+    gap: 8px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.post_card > .title_post > i{
+    font-size: 14pt !important;
+    margin-right: 16px;
+}
+
+.post_card:hover{
+    translate: 0px -8px !important;
+}
+
+.title_post{
+    font-weight: 800;
+}
+
+.text{
+    font-size: 12pt;
+    text-align: left;
+}
+
+.warning_page{
+    background-color: rgba(255, 255, 255, 0.178);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px;
+    box-sizing: border-box;
+    height: auto;
+    gap: 8px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
