@@ -841,3 +841,18 @@ noscript{
 .goup:hover{
     scale: 110%;
 }
+
+.vertical_normal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.warning_page > .horizontal_base > img{
+    height: 20vh;
+    object-fit: contain;
+    width: auto;
+    border-radius: 8px !important;
+}
