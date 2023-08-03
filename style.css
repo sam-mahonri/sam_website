@@ -791,6 +791,12 @@ footer > a > img:hover{
     text-align: left;
 }
 
+.bing_chat_description{
+    font-size: 1px;
+    color: #ffffff05;
+    cursor: default;
+}
+
 .warning_page{
     background-color: rgba(255, 255, 255, 0.178);
     display: flex;
