@@ -629,7 +629,7 @@ p{
 .card_button{
     cursor: pointer;
     display: flex;
-    height: 25vh;
+    height: 20vh;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -640,6 +640,10 @@ p{
     font-family: 'Lexend', sans-serif !important;
     flex-direction: column;
     gap: 8px;
+}
+
+.none_cursor{
+    cursor: default !important;
 }
 
 .card_button > i{
