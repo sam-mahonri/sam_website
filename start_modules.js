@@ -10,12 +10,24 @@ async function carregarConteudo(elementoId, url) {
 
 async function carregarTodosOsElementos() {
     try {
-        await Promise.all([
-            carregarConteudo("nav_area", "./source/modules/navbar.html"),
-            carregarConteudo("footer", "./source/modules/footer.html"),
-            carregarConteudo("warn_area", "./source/modules/warning.html"),
-            carregarConteudo("floating_area", "./source/modules/goup.html")
-        ]);
+        if(page_lang == "pt"){
+            await Promise.all([
+                carregarConteudo("nav_area", "./source/modules/navbar.html"),
+                carregarConteudo("footer", "./source/modules/footer.html"),
+                carregarConteudo("warn_area", "./source/modules/warning.html"),
+                carregarConteudo("floating_area", "./source/modules/goup.html"),
+                carregarConteudo("lang_area", "./source/modules/lang.html")
+            ]);
+        }else if(page_lang == "en"){
+            await Promise.all([
+                carregarConteudo("nav_area", "./source/modules/navbar_en.html"),
+                carregarConteudo("footer", "./source/modules/footer_en.html"),
+                carregarConteudo("warn_area", "./source/modules/warning_en.html"),
+                carregarConteudo("floating_area", "./source/modules/goup.html"),
+                carregarConteudo("lang_area", "./source/modules/lang.html")
+            ]);
+        }
+        
         console.log("[ OwO ] Página completamente carregada com êxito!");
         if (currentPage == "arts"){
             document.getElementById('arts').classList.add("active_nav_bt");
@@ -37,6 +49,21 @@ async function carregarTodosOsElementos() {
             document.getElementById('page_name').innerHTML = '<i class="fas fa-heart"></i>';
         }else{
             document.getElementById('page_name').innerHTML = '';
+        }
+
+        if (localStorage.getItem('current_lang') == null){
+            document.getElementById('lang_menu').classList.add('pop_lang_opened');
+            localStorage.setItem('current_lang', "pt");
+        }else if(localStorage.getItem('current_lang') == 'en'){
+            if(page_lang == "pt"){
+                window.location.href = './index_en.html'
+            }
+        }
+
+        if(page_lang == "pt"){
+            localStorage.setItem('current_lang', "pt")
+        }else if (page_lang == "en"){
+            localStorage.setItem('current_lang', "en")
         }
     } catch (error) {
         console.error("[ ERR ] Falha ao carregar conteúdo da página! - " + error);
@@ -63,10 +90,27 @@ function toggleMenu(){
     
 }
 
+function openLangMenu(){
+    document.getElementById('lang_menu').classList.add('pop_lang_opened');
+}
+
+function closeThisParent(self){
+    self.parentNode.classList.remove('pop_lang_opened');
+}
+
 var loaded_images = 0;
 var buf_size = 0;
 var max_img = 0;
 
+function gotoTranslation(lang){
+    localStorage.setItem('current_lang', lang);
+    if (lang == "en"){
+        window.location.href = "/en/" + currentPage
+    }else{
+        window.location.href = "/" + currentPage
+    }
+    
+}
 function loadArts() {
     fetch('data.json')
         .then(response => response.json())
@@ -131,3 +175,4 @@ function onlyShowPrices(){
     document.getElementById('show_prices').innerHTML = 'Ocultar preços<i class="fas fa-money-bill-wave"></i><i class="fas fa-chevron-circle-up"></i>';
     prices_show = true
 }
+

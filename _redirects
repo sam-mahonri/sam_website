@@ -5,3 +5,10 @@
 /tos /tos.html 200
 /music /music.html 200
 /comms /comms.html 200
+
+/en /index_en.html 200
+/en/comms /comms_en.html 200
+/en/music /music_en.html 200
+/en/arts /arts.html 200
+/en/projects /projects.html 200
+/en/about /about.html 200

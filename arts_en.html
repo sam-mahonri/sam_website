@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="icon.png">
-    <title>Music - Sam Mahonri</title>
+    <title>Arts - Sam Mahonri</title>
 </head>
 <body>
     <div class="todo">
@@ -19,27 +19,19 @@
                     <div id="warn_area"></div>
                     <div class="vh_mid_banner">
                         <div class="title">
-                            Minhas músicas
+                            Art Gallery
                         </div>
                         <i class="fas fa-chevron-down down_anim"></i>
                     </div>
                     <div class="info">
-                        Última atualização em 25 de Julho, 2023
+                        Last update in August 14 , 2023
                     </div>
                     <div class="subtitle">
-                        Mais recentes
+                        Most recent
                     </div>
                     <div class="divisor"></div>
-                    <div class="title">
-                        OST - Nightmare Fable
-                    </div>
-                    <div class="info">
-                        Publicadas no Soundcloud
-                    </div>
-                    <iframe width="100%" height="450px" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1643555917&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false" style="border-radius: 10px; margin-top: 16px;"></iframe>
-                    <a href="https://nightmarefable.com" target="_blank">
-                        <button class="normal_bt" style="margin-top: 16px;">Site - Nightmare Fable</button>
-                    </a>
+                    <div class="gallery"></div>
+                    <button class="normal_bt" id="load_more_img" style="margin-top: 16px;" onclick="continueLoadingImages()">Load more arts +<i class="fas fa-plus"></i></button>
                 </div>
                 <footer id="footer"></footer>
             </div>
@@ -52,10 +44,11 @@
         Para continuar utilizando este site, ative o Javascript em seu navegador e atualize esta página.
     </noscript>
     <div id="floating_area"></div>
+    <script>var currentPage = "arts";</script>
     <div id="lang_area"></div>
-    <script>var page_lang = "pt"; </script>
-    <script>var currentPage = "music"</script>
+    <script>var page_lang = "en"; </script>
     <script src="start_modules.js"></script>
+    <script>loadArts()</script>
 </body>
 
 </html>
