@@ -56,7 +56,7 @@ async function carregarTodosOsElementos() {
             localStorage.setItem('current_lang', "pt");
         }else if(localStorage.getItem('current_lang') == 'en'){
             if(page_lang == "pt"){
-                window.location.href = './index_en.html'
+                window.location.href = '/en/' + currentPage
             }
         }
 
