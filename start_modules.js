@@ -56,7 +56,7 @@ async function carregarTodosOsElementos() {
             localStorage.setItem('current_lang', "pt");
         }else if(localStorage.getItem('current_lang') == 'en'){
             if(page_lang == "pt"){
-                window.location.href = '/en/' + currentPage
+                window.location.href = '/en_' + currentPage
             }
         }
 
@@ -105,7 +105,7 @@ var max_img = 0;
 function gotoTranslation(lang){
     localStorage.setItem('current_lang', lang);
     if (lang == "en"){
-        window.location.href = "/en/" + currentPage
+        window.location.href = "/en_" + currentPage
     }else{
         window.location.href = "/" + currentPage
     }
