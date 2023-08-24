@@ -754,7 +754,8 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--fulldark);
+    background-color: rgba(0, 0, 0, 0.095);
+    border-top: solid 2px var(--enfdarkbt);
     box-sizing: border-box;
     padding: 32px;
     height: auto;
