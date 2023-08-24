@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Peta:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Zetta:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica+Giga:wght@100;200;300;400;500;600;700;800;900&family=Geologica+Peta:wght@100;200;300;400;500;600;700;800;900&family=Geologica+Zetta:wght@100;200;300;400;500;600;700;800;900&family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 :root {
-    --fulldark: #1e1b25;
+    --fulldark: #26232d;
     --fulllight: #f5f4fd;
-    --secdark: #16131dbe;
+    --secdark: #16131d4e;
     --enfdark: #8858ffff;
-    --enfdarkbt: #5b4c7470;
+    --enfdarkbt: #d4b9ff29;
     --moredark: #08031d63;
     --seclight: #c6c0f5;
     --hover_act_a: #60d78a;
@@ -37,7 +37,7 @@ body {
     color: var(--current_text_color);
     transition-duration: 0.3s;
     text-align: center;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 300;
 }
 
@@ -65,7 +65,7 @@ body {
     background-color: var(--fulldark);
     
     padding: 8px 16px 8px 16px;
-    border: none;
+    border: solid 1px var(--enfdarkbt);
 }
 .lang_bt:hover{
     max-width: 256px;
@@ -128,7 +128,7 @@ body {
 
 .title{
     display: flex;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 900;
     font-size: 22pt;
     flex-direction: row;
@@ -143,7 +143,7 @@ body {
 .subtitle{
     display: flex;
     flex-direction: row;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 500;
     font-size: 16pt;
     margin-bottom: 4px;
@@ -154,7 +154,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     margin-top: 8px;
     align-items: center;
 }
@@ -190,7 +190,7 @@ body {
     padding: 12px;
     background-color: transparent;
     border: none;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 300;
     font-size: 11pt;
     text-align: right;
@@ -241,10 +241,10 @@ a{
 }
 
 .title_navbar > span{
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 12pt;
     font-weight: 600;
-    margin-top: -10px;
+    margin-top: -16px;
 }
 
 .desktop{
@@ -311,7 +311,7 @@ a{
         padding-left: 6px;
     }
     .fixed_icon > span{
-        font-family: 'Lexend', sans-serif;
+        font-family: 'Geologica', sans-serif;
         font-size: 12pt;
         font-weight: 700;
     }
@@ -400,7 +400,7 @@ a{
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     margin-top: 16px;
     width: 100%;
 }
@@ -412,29 +412,29 @@ a{
     background-repeat: no-repeat;
     margin-bottom: -32px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 @media only screen and (max-width: 700px){
     .gallery-item {
-        flex: 1 0 calc(100% - 10px);
+        flex: 1 0 calc(100% - 16px);
     }    
 }
 @media only screen and (min-width: 800px) and (max-width: 900px){
     .gallery-item {
-        flex: 1 0 calc(50% - 10px);
+        flex: 1 0 calc(50% - 16px);
     }    
 }
 @media only screen and (min-width: 901px){
     .gallery-item {
-        flex: 1 0 calc(33% - 10px);
+        flex: 1 0 calc(33% - 16px);
     }    
 }
 
 .gallery-item img {
     width: 100%;
     height: 50vh;
-    border-radius: 10px;
+    border-radius: 16px;
     object-fit: cover;
     opacity: 0.8;
 }
@@ -538,7 +538,7 @@ a{
 
 .big_quote{
     display: flex;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 12pt;
     flex-direction: column;
     gap: 16px;
@@ -627,7 +627,7 @@ a{
     padding: 22px;
     background-color: #211d2733;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 16px;
     width: 100%;
     margin-bottom: 16px;
 }
@@ -638,7 +638,7 @@ li, ol{
 }
 
 .title_2{
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 14pt;
     font-weight: 800;
 }
@@ -667,10 +667,10 @@ p{
     align-items: center;
     width: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.178);
     font-size: 15pt;
-    font-family: 'Lexend', sans-serif !important;
+    font-family: 'Geologica', sans-serif !important;
     flex-direction: column;
     gap: 8px;
 }
@@ -770,7 +770,7 @@ footer > a > img:hover{
     margin: 16px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 16px;
 }
 .mini_socials > i{
     font-size: 12pt;
@@ -798,11 +798,11 @@ footer > a > img:hover{
     align-items: start;
     width: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 16px;
     background-color: #21192772;
     background-blend-mode: darken;
     font-size: 15pt;
-    font-family: 'Lexend', sans-serif !important;
+    font-family: 'Geologica', sans-serif !important;
     flex-direction: column-reverse;
     gap: 8px;
     padding: 18px;
@@ -840,8 +840,8 @@ footer > a > img:hover{
     position: fixed;
     bottom: 16px;
     right: 16px;
-    background-color: var(--fulldark);
-    border-radius: 8px;
+    background-color: var(--secdark);
+    border-radius: 16px;
     border: solid 1px rgba(255, 255, 255, 0.144);
     display: flex;
     padding: 0px 16px 0px 16px;
@@ -851,6 +851,7 @@ footer > a > img:hover{
     overflow: hidden;
     max-height: 0px;
     opacity: 0;
+    backdrop-filter: blur(32px);
 
 }
 
@@ -878,12 +879,12 @@ footer > a > img:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 16px;
+    padding: 22px;
     box-sizing: border-box;
     height: auto;
     gap: 8px;
     margin-bottom: 16px;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 noscript{
